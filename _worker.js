@@ -18,6 +18,22 @@ export default {
     if (p === "/index.html") return Response.redirect(url.origin + "/" + url.search, 301);
     // Eine Adresse je Seite: /leistungen führt auf /leistungen.html
     if (kurz && SEITEN.has(kurz.slice(1))) return Response.redirect(url.origin + kurz + ".html" + url.search, 301);
+    // Film und Musik: Teilstücke ausliefern (Safari und iPhone spielen sonst nicht ab)
+    if (/\.(mp4|mp3)$/.test(p)) {
+      const voll = await env.ASSETS.fetch(new Request(url.toString()));
+      if (!voll.ok) return voll;
+      const kopfzeilen = new Headers(voll.headers); kopfzeilen.set("Accept-Ranges", "bytes");
+      const m = /^bytes=(\d*)-(\d*)$/.exec(request.headers.get("Range") || "");
+      const lang = Number(voll.headers.get("Content-Length")) || 0;
+      if (!m || (m[1] === "" && m[2] === "") || !lang) return new Response(request.method === "HEAD" ? null : voll.body, { status: 200, headers: kopfzeilen });
+      const von = m[1] === "" ? Math.max(0, lang - Number(m[2])) : Number(m[1]);
+      const bis = m[1] === "" || m[2] === "" ? lang - 1 : Math.min(Number(m[2]), lang - 1);
+      if (von > bis || von >= lang) return new Response(null, { status: 416, headers: { "Content-Range": "bytes */" + lang } });
+      kopfzeilen.set("Content-Range", "bytes " + von + "-" + bis + "/" + lang); kopfzeilen.set("Content-Length", String(bis - von + 1));
+      if (request.method === "HEAD") return new Response(null, { status: 206, headers: kopfzeilen });
+      if (von === 0 && bis === lang - 1) return new Response(voll.body, { status: 206, headers: kopfzeilen });
+      return new Response((await voll.arrayBuffer()).slice(von, bis + 1), { status: 206, headers: kopfzeilen });
+    }
     // Seiten mit .html direkt ausliefern
     if (p.endsWith(".html")) {
       const u = new URL(url); u.pathname = p.slice(0, -5);
