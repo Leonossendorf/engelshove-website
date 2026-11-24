@@ -4,7 +4,7 @@
 .fragen summary{position:relative;display:block;padding:22px 46px 22px 0;cursor:pointer;list-style:none;font-family:var(--schrift-gross);font-stretch:125%;font-weight:300;font-size:clamp(20px,1.9vw,28px);line-height:1.22;text-decoration:none}
 .fragen summary::-webkit-details-marker{display:none}
 .fragen summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--schrift-text);font-size:32px;font-weight:200;line-height:1}
-.fragen details[open] summary::after{content:"3"}
+.fragen details[open] summary::after{content:"–"}
 .fragen summary:focus-visible{outline:2px solid var(--licht);outline-offset:4px}
 .frage-a{max-width:70ch;padding:0 0 26px;font-size:18px}
 .frage-a p{margin:0 0 .7em}
