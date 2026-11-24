@@ -1,6 +1,6 @@
 # Mit der Umgebung im Dialog: Einfamilienhaus – Engelshove Bau
 
-> Einfamilienhaus auf rund 1.700 m² Grund: gestaffelte Baukörper, naturfarbene Ziegel, Lamellen aus eloxiertem Aluminium und ein rundes Oberlicht. Titel der Cube Düsseldorf 04|26.
+> Einfamilienhaus auf rund 1.700 m² Grund: gestaffelte Baukörper, naturfarbene Ziegel, Lamellen aus Aluminium, rundes Oberlicht. Titel der Cube Düsseldorf 04|26.
 
 Quelle: https://www.engelshove.de/projekt-lichtband.html
 

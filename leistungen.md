@@ -1,6 +1,6 @@
-# Leistungen und häufige Fragen: Planung, Bau, Bauleitung – Engelshove Bau
+# Hausbau aus einer Hand: Planung, Bau, Bauleitung – Engelshove Bau
 
-> Wohnhaus, Umbau, Gewerbebau, Garten und Pools: Engelshove Bau plant und baut aus einer Hand, vom ersten Entwurf bis zur Fertigstellung. Mit Antworten auf häufige Fragen zum Hausbau.
+> Wohnhaus, Umbau, Gewerbebau, Garten und Pool: Engelshove Bau plant und baut aus einer Hand. Mit Antworten auf häufige Fragen zum Hausbau.
 
 Quelle: https://www.engelshove.de/leistungen.html
 

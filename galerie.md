@@ -1,6 +1,6 @@
 # Bilder aus unseren Projekten – Engelshove Bau
 
-> Bildergalerie: Aufnahmen aus den Projekten der Engelshove Bau GmbH, nach Rubriken wählbar.
+> Bildergalerie mit 146 Fotos aus Häusern von Engelshove Bau: außen, innen, Küche, Bad, Garten und Pool, am Abend. Nach Rubriken wählbar.
 
 Quelle: https://www.engelshove.de/galerie.html
 

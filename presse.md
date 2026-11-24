@@ -1,6 +1,6 @@
 # Presse und Filme – Engelshove Bau, Neuenkirchen
 
-> Cube Magazin, Domus, stylus, Schüco panorama und Jahreskalender, Wienerberger, Rehau-Film, RTL2 Die Bauretter: Berichte über Engelshove Bau, mit Links zum Original und Scans der Seiten.
+> Berichte über Engelshove Bau: Cube Magazin, Domus, stylus, Schüco, Wienerberger, Rehau-Film und RTL2 Die Bauretter. Mit Links zum Original und Scans.
 
 Quelle: https://www.engelshove.de/presse.html
 

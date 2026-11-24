@@ -1,6 +1,6 @@
 # Haus bauen mit Architekt: Einfamilienhäuser von Engelshove Bau
 
-> Haus bauen im Münsterland: Einfamilienhäuser von Engelshove, massiv gebaut, modern, als Landhaus oder mit Klinker und Satteldach. Geplant und gebaut aus einer Hand.
+> Haus bauen im Münsterland: Einfamilienhäuser von Engelshove, massiv gebaut, modern, als Landhaus oder mit Klinker. Geplant und gebaut aus einer Hand.
 
 Quelle: https://www.engelshove.de/wohnhaus.html
 

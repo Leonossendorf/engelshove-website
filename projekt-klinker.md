@@ -1,6 +1,6 @@
 # Klassiker am Wasser: Einfamilienhaus – Engelshove Bau
 
-> Einfamilienhaus aus rotbuntem Klinker mit Satteldach, Sprossenfenstern, Terrasse und Pool.
+> Einfamilienhaus aus rotbuntem Klinker mit Satteldach, Sprossenfenstern, Terrasse und Pool. Geplant und gebaut von Engelshove Bau, mit Fotos von außen und innen.
 
 Quelle: https://www.engelshove.de/projekt-klinker.html
 
