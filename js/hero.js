@@ -211,7 +211,9 @@
   document.addEventListener("visibilitychange", wieder);
   window.addEventListener("pageshow", function (e) { if (e.persisted) wieder(); });
 
-  if (!reduziert) { ablauf.classList.add("laeuft"); malen(0); mauerStart(); }
+  // mauerStart (WebGL für das Haus aus Steinen) läuft nicht mehr beim Öffnen, sondern erst mit szeneLaden: Die Szene liegt unter dem Film,
+  // und die Vorbereitung kostet auf langsamen Handys ein bis zwei Sekunden Rechenzeit (25.11., Googles PageSpeed).
+  if (!reduziert) { ablauf.classList.add("laeuft"); malen(0); }
   knopfText();
   var plan = false;
   var beimScrollen = function () {
@@ -231,6 +233,8 @@
       if (b.dataset.srcset) b.setAttribute("srcset", b.dataset.srcset);
       b.setAttribute("src", b.dataset.src);
     });
+    // in einer ruhigen Lücke, damit weder der Filmstart noch das erste Scrollen ruckelt
+    (window.requestIdleCallback || function (f) { setTimeout(f, 60); })(mauerStart, { timeout: 600 });
   };
   if (reduziert) szeneLaden();
   else ["scroll", "wheel", "touchstart", "pointerdown", "keydown"].forEach(function (n) { window.addEventListener(n, szeneLaden, { passive: true, once: true }); });
