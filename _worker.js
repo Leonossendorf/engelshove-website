@@ -43,7 +43,7 @@ export default {
     const p = url.pathname;
     const kurz = p.replace(/\/index\.html$/, "").replace(/\/+$/, "");
     // Adressen der alten Website: echte Weiterleitung (301)
-    if (kurz && ALT[kurz]) return Response.redirect(url.origin + "/" + ALT[kurz], 301);
+    if (kurz && ALT[kurz]) return Response.redirect(url.origin + "/" + ALT[kurz].replace("index.html", ""), 301);
     if (p === "/index.html") return Response.redirect(url.origin + "/" + url.search, 301);
     // Eine Adresse je Seite: /leistungen führt auf /leistungen.html
     if (kurz && SEITEN.has(kurz.slice(1))) return Response.redirect(url.origin + kurz + ".html" + url.search, 301);

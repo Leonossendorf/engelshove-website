@@ -148,7 +148,9 @@
   // Datensparmodus oder sehr langsames Netz (2G/3G): kein Film von selbst, das Standbild bleibt, der Knopf „Film abspielen“ startet ihn.
   var netz = navigator.connection || {};
   var sparen = !!netz.saveData || /(^|-)2g|3g/.test(netz.effectiveType || "");
-  var angehalten = !!(reduziert || sparen);   // der Film soll stehen: vom Besucher angehalten, zu Ende gelaufen oder gar nicht erst gestartet
+  // Nur zum Messen: www.engelshove.de/?probe=ohnefilm zeigt die Seite ohne automatischen Filmstart (Vergleich in Googles PageSpeed, 25.11.)
+  var probe = /[?&]probe=ohnefilm/.test(location.search);
+  var angehalten = !!(reduziert || sparen || probe);   // der Film soll stehen: vom Besucher angehalten, zu Ende gelaufen oder gar nicht erst gestartet
   var tonGewollt = !reduziert, winkAn = false;
   // Hochkant (Handy): eigener Hochkant-Film, rund 2 MB. Quer: 720p, auf großen Schirmen 1080p.
   var hoch = window.matchMedia && window.matchMedia("(max-aspect-ratio:4/5)").matches;
